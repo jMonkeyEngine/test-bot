@@ -194,6 +194,9 @@ public class AndroidHarness extends Activity implements TouchListener, DialogInt
         initializeLogHandler();
 
         logger.fine("onCreate");
+        if (logger == null) {
+            logger.fine("logger is null omg!");
+        }
         super.onCreate(savedInstanceState);
 
         if (screenFullScreen) {
