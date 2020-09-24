@@ -179,6 +179,10 @@ public abstract class Serializer {
             nextAvailableId--;   
         }
         
+        if (idRegistrations == null) {
+            return 0;
+        }
+        
         // Return the available ID and post-decrement to get
         // ready for next time.    
         return nextAvailableId--;
