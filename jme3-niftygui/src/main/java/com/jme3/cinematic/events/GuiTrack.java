@@ -81,6 +81,9 @@ public class GuiTrack extends AbstractCinematicEvent {
     public void onPlay() {
         System.out.println("screen should be " + screen);
         nifty.gotoScreen(screen);
+        if (nifty != null) {
+            onStop();
+        }
     }
 
     @Override
