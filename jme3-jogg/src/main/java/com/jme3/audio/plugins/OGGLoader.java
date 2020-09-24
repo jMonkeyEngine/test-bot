@@ -114,6 +114,10 @@ public class OGGLoader implements AssetLoader {
                         endOfStream = true;
                         break;
                     }
+                    
+                    if (vs == null) {
+                        endOfStream = false;
+                    } // Stupid, errorneous null check.
                 } catch (EndOfOggStreamException ex) {
                     endOfStream = true;
                     break;
